@@ -1,135 +1,53 @@
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family: 'Poppins', sans-serif;
-  scroll-behavior: smooth;
-}
-body{
-  background:#081b29;
-  color:#ededed;
-  overflow-x:hidden;
-}
-.header{
-  position:fixed;
-  top:0; left:0;
-  width:100%;
-  padding:20px 10%;
-  background:#081b29;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  z-index:100;
-}
-.logo{
-  font-size:25px; color:#fff; text-decoration:none; font-weight:600;
-}
-.navbar a{
-  font-size:18px; color:#fff; text-decoration:none;
-  margin-left:35px; transition:.3s;
-}
-.navbar a:hover, .navbar a.active{ color:#0ef; }
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;scroll-behavior:smooth}
+body{background:#081b29;color:#ededed;overflow-x:hidden}
+.header{position:fixed;top:0;left:0;width:100%;padding:20px 10%;background:#081b29;display:flex;justify-content:space-between;align-items:center;z-index:100;border-bottom:1px solid #112e42}
+.logo{font-size:25px;color:#fff;text-decoration:none;font-weight:700}
+.navbar a{font-size:17px;color:#fff;text-decoration:none;margin-left:30px;transition:.3s}
+.navbar a:hover,.navbar a.active{color:#0ef}
+.home{display:flex;justify-content:space-between;align-items:center;min-height:100vh;padding:120px 10% 50px;gap:40px}
+.home-content{max-width:600px}
+.home-content h3{font-size:28px;font-weight:700}
+.home-content h1{font-size:42px;margin:5px 0;font-weight:700}
+.home-content p{margin:15px 0 25px;line-height:1.6;font-size:16px}
+.text{color:#0ef}
+.home-sci a{display:inline-flex;justify-content:center;align-items:center;width:40px;height:40px;border:2px solid #0ef;border-radius:50%;color:#0ef;text-decoration:none;margin:15px 10px 25px 0;font-size:20px}
+.btn-box{display:inline-block;padding:12px 28px;background:#0ef;color:#081b29;border-radius:40px;text-decoration:none;font-weight:600;box-shadow:0 0 10px #0ef}
+.hero-img .glow-circle,.about-img .glow-circle{width:340px;height:340px;border-radius:50%;padding:6px;background:linear-gradient(45deg,#0ef,#a855f7,#0ef);box-shadow:0 0 35px #0ef}
+.hero-img img,.about-img img{width:100%;height:100%;object-fit:cover;border-radius:50%;background:#fff}
+.about{display:flex;justify-content:center;align-items:center;gap:60px;padding:100px 10%;background:#0a2536}
+.about-text h2{font-size:45px}
+.about-text h2 span,.heading span{color:#0ef}
+.about-text h4{font-size:20px;margin:10px 0}
+.about-text p{line-height:1.7;margin:15px 0}
+.skills,.portfolio,.contact{padding:90px 10%}
+.heading{text-align:center;font-size:42px;margin-bottom:40px}
+.skills-container{display:flex;gap:40px;flex-wrap:wrap}
+.skills-box{flex:1 1 300px;background:#112e42;padding:25px;border-radius:15px}
+.skill-bar{margin:20px 0}.skill-info{display:flex;justify-content:space-between}
+.bar{width:100%;height:8px;background:#081b29;border-radius:5px;margin-top:6px}
+.bar span{display:block;height:100%;background:#0ef;border-radius:5px}
+.portfolio-container{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px}
+.portfolio-box{position:relative;border-radius:15px;overflow:hidden;height:260px;border:2px solid #112e42}
+.portfolio-box img{width:100%;height:100%;object-fit:cover}
+.portfolio-layer{position:absolute;bottom:0;left:0;width:100%;height:100%;background:linear-gradient(rgba(0,0,0,.3),#0ef);display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:20px;transform:translateY(100%);transition:.5s}
+.portfolio-box:hover .portfolio-layer{transform:translateY(0)}
+.contact form{max-width:700px;margin:0 auto;text-align:center}
+.input-box{display:flex;gap:20px}.input-box input{width:50%}
+.contact form input,.contact form textarea{width:100%;padding:15px;margin:10px 0;background:#112e42;border:none;border-radius:8px;color:#fff;outline:none}
+.contact form .btn{background:#0ef;color:#081b29;padding:12px 30px;border:none;border-radius:40px;font-weight:600;cursor:pointer}
+.footer{display:flex;justify-content:center;padding:20px 10%;background:#0a2536;border-top:1px solid #112e42}
 
-/* HOME */
-.home{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  min-height:100vh;
-  padding:100px 10% 0;
-  gap:40px;
-}
-.home-content{ max-width:600px; }
-.home-content h1{ font-size:40px; }
-.home-content h3{ font-size:28px; }
-.home-content p{ margin:15px 0 25px; line-height:1.6; }
-.text{ color:#0ef; }
-
-.home-sci a{
-  display:inline-flex;
-  justify-content:center; align-items:center;
-  width:40px; height:40px;
-  border:2px solid #0ef; border-radius:50%;
-  color:#0ef; text-decoration:none; margin:10px 10px 20px 0;
-}
-.btn-box{
-  display:inline-block; padding:12px 28px;
-  background:#0ef; color:#081b29; border-radius:40px;
-  text-decoration:none; font-weight:600;
-}
-.hero-img .glow-circle, .about-img .glow-circle{
-  width:350px; height:350px;
-  border-radius:50%;
-  padding:5px;
-  background: linear-gradient(45deg, #0ef, #a855f7, #0ef);
-  box-shadow:0 0 30px #0ef;
-}
-.hero-img img, .about-img img{
-  width:100%; height:100%;
-  object-fit:cover; border-radius:50%;
-  background:#fff;
-}
-
-/* ABOUT */
-.about{
-  display:flex; justify-content:center; align-items:center;
-  gap:60px; padding:90px 10%; background:#0a2536;
-}
-.about-text h2{ font-size:50px; }
-.about-text h2 span, .heading span{ color:#0ef; }
-.about-text p{ line-height:1.7; margin:20px 0; }
-
-/* SKILLS + PORTFOLIO + CONTACT */
-.skills, .portfolio, .contact{ padding:90px 10%; }
-.heading{ text-align:center; font-size:45px; margin-bottom:40px; }
-.skills-container{ display:flex; gap:40px; flex-wrap:wrap; }
-.skills-box{ flex:1 1 300px; }
-.skill-bar{ margin:20px 0; }
-.skill-info{ display:flex; justify-content:space-between; }
-.bar{ width:100%; height:8px; background:#112e42; border-radius:5px; margin-top:5px; }
-.bar span{ display:block; height:100%; background:#0ef; border-radius:5px; }
-.networking{width:85%} .data{width:90%} .troubleshoot{width:88%}
-.coding{width:75%} .support{width:92%} .his{width:80%} .team{width:85%} .profnet{width:82%}
-
-.portfolio-container{ display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:25px; }
-.portfolio-box{ position:relative; border-radius:15px; overflow:hidden; height:250px; }
-.portfolio-box img{ width:100%; height:100%; object-fit:cover; }
-.portfolio-layer{
-  position:absolute; bottom:0; left:0; width:100%; height:100%;
-  background:linear-gradient(rgba(0,0,0,0.2), #0ef);
-  display:flex; flex-direction:column; justify-content:center; align-items:center;
-  text-align:center; padding:20px; transform:translateY(100%); transition:.5s;
-}
-.portfolio-box:hover .portfolio-layer{ transform:translateY(0); }
-
-.contact form{ max-width:700px; margin:0 auto; text-align:center; }
-.input-box{ display:flex; gap:20px; }
-.input-box input{ width:50%; }
-.contact form input, .contact form textarea{
-  width:100%; padding:15px; margin:10px 0;
-  background:#112e42; border:none; border-radius:8px; color:#fff;
-}
-.contact form .btn{ background:#0ef; color:#081b29; cursor:pointer; font-weight:600; }
-
-.footer{ display:flex; justify-content:space-between; padding:20px 10%; background:#0a2536; }
-.footer-iconTop a{ background:#0ef; padding:8px; border-radius:8px; color:#081b29; text-decoration:none; }
-
-/* === MOBILE FIX - THIS SOLVES YOUR SCREENSHOT PROBLEM === */
-@media (max-width: 768px){
-  .header{ padding:15px 5%; }
-  .navbar{ display:none; } /* hide menu on phone for now */
-  .home, .about{
-    flex-direction:column;
-    padding:100px 5% 40px;
-    text-align:center;
-  }
-  .home-content, .about-text{ max-width:100%; width:100%; }
-  .home-content h1{ font-size:28px; }
-  .about-text h2{ font-size:32px; }
-  .hero-img .glow-circle, .about-img .glow-circle{
-    width:230px; height:230px; margin:20px auto;
-  }
-  .input-box{ flex-direction:column; gap:0; }
-  .input-box input{ width:100%; }
-  .skills-container{ flex-direction:column; }
+/* MOBILE - FIXES YOUR ISSUE */
+@media (max-width:900px){
+  .header{padding:15px 5%;flex-wrap:wrap;justify-content:center;gap:10px}
+  .navbar{width:100%;display:flex !important;justify-content:center;flex-wrap:wrap;gap:15px}
+  .navbar a{margin:0;font-size:14px}
+  .home{flex-direction:column-reverse;padding:130px 5% 50px;text-align:center}
+  .home-content{max-width:100%}
+  .home-content h1{font-size:28px}
+  .hero-img .glow-circle{width:220px;height:220px}
+  .about{flex-direction:column;padding:60px 5%;text-align:center}
+  .about-img .glow-circle{width:220px;height:220px;margin:0 auto}
+  .input-box{flex-direction:column;gap:0}
+  .input-box input{width:100%}
 }
